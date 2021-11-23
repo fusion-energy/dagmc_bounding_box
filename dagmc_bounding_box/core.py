@@ -19,8 +19,7 @@ class DagmcBoundingBox:
         self.mesh_object = trimesh.load_mesh(self.h5m_filename, process=False)
 
     def corners(
-        self,
-        expand: Tuple[float, float, float] = None
+        self, expand: Tuple[float, float, float] = None
     ) -> Tuple[Tuple[float, float, float], Tuple[float, float, float]]:
         """Gets the lower left corner and upper right corner of the DAGMC
         geometry
