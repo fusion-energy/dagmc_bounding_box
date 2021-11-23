@@ -8,7 +8,7 @@ from dagmc_bounding_box import DagmcBoundingBox
 
 
 class TestPythonApi(unittest.TestCase):
-    """Tests the neutronics utilities functionality and use cases"""
+    """Tests functionality of the package"""
 
     def setUp(self):
 
@@ -38,6 +38,15 @@ class TestPythonApi(unittest.TestCase):
         assert len(my_bb) == 2
         assert len(my_bb[0]) == 3
         assert len(my_bb[1]) == 3
+
+    def test_corners_relative_magnitude(self):
+        dagmc_filename = "tests/neutronics_workflow-0.0.2/example_01_single_volume_cell_tally/stage_2_output/dagmc.h5m"
+        my_bb = DagmcBoundingBox(dagmc_filename).corners()
+
+        assert my_bb[0][0] < my_bb[1][0]
+        assert my_bb[0][1] < my_bb[1][1]
+        assert my_bb[0][2] < my_bb[1][2]
+
 
 # TODO add a test to check the correct values are found
 
