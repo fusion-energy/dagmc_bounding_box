@@ -39,6 +39,7 @@ class TestPythonApi(unittest.TestCase):
         assert len(my_bb[0]) == 3
         assert len(my_bb[1]) == 3
 
+
 # TODO add a test to check the correct values are found
 
 # TODO add a test to check that extend increases the values correctly
