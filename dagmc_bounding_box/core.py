@@ -1,30 +1,31 @@
-
 import trimesh
 from typing import Tuple
 
 
-class DagmcBoundingBox():
+class DagmcBoundingBox:
     def __init__(self, h5m_filename):
-    """Loads the h5m file provided and provides access to the bounding box and
-    related aspects of the geometry
+        """Loads the h5m file provided and provides access to the bounding box and
+        related aspects of the geometry
 
-    Args:
-        expand: increase (+ve) number or decrease the offset from the
-            bounding box
+        Args:
+            expand: increase (+ve) number or decrease the offset from the
+                bounding box
 
-    Returns:
-        vertices of lower left corner and upper right corner
-    """
+        Returns:
+            vertices of lower left corner and upper right corner
+        """
 
         self.h5m_filename = h5m_filename
         self.mesh_object = trimesh.load_mesh(self.h5m_filename, process=False)
 
-    def corners(expand: Tuple[float,float,float]=None)-> Tuples[Tuple[float,float,float],Tuple[float,float,float]]:
+    def corners(
+        expand: Tuple[float, float, float] = None
+    ) -> Tuples[Tuple[float, float, float], Tuple[float, float, float]]:
         """Gets the lower left corner and upper right corner of the DAGMC
         geometry
-        
+
         Args:
-            expand: 
+            expand:
 
         Returns:
             A tuple of two coordinates
