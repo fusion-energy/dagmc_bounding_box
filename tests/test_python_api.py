@@ -67,29 +67,33 @@ class TestPythonApi(unittest.TestCase):
 
     def test_bounding_box_size_with_expand(self):
 
-        my_bb = DagmcBoundingBox(self.h5m_filename_bigger).corners(expand=(100,200,300))
+        my_bb = DagmcBoundingBox(self.h5m_filename_bigger).corners(
+            expand=(100, 200, 300)
+        )
 
         print(my_bb)
         assert len(my_bb) == 2
         assert len(my_bb[0]) == 3
         assert len(my_bb[1]) == 3
-        assert my_bb[0][0] == pytest.approx(-10005-100, abs=0.1)
-        assert my_bb[0][1] == pytest.approx(-10005-200, abs=0.1)
-        assert my_bb[0][2] == pytest.approx(-10005-300, abs=0.1)
-        assert my_bb[1][0] == pytest.approx(10005+100, abs=0.1)
-        assert my_bb[1][1] == pytest.approx(10005+200, abs=0.1)
-        assert my_bb[1][2] == pytest.approx(10005+300, abs=0.1)
+        assert my_bb[0][0] == pytest.approx(-10005 - 100, abs=0.1)
+        assert my_bb[0][1] == pytest.approx(-10005 - 200, abs=0.1)
+        assert my_bb[0][2] == pytest.approx(-10005 - 300, abs=0.1)
+        assert my_bb[1][0] == pytest.approx(10005 + 100, abs=0.1)
+        assert my_bb[1][1] == pytest.approx(10005 + 200, abs=0.1)
+        assert my_bb[1][2] == pytest.approx(10005 + 300, abs=0.1)
 
     def test_bounding_box_size_2_with_expand(self):
 
-        my_bb = DagmcBoundingBox(self.h5m_filename_smaller).corners(expand=(100,200,300))
+        my_bb = DagmcBoundingBox(self.h5m_filename_smaller).corners(
+            expand=(100, 200, 300)
+        )
 
         assert len(my_bb) == 2
         assert len(my_bb[0]) == 3
         assert len(my_bb[1]) == 3
-        assert my_bb[0][0] == pytest.approx(-10005-100, abs=0.1)
-        assert my_bb[0][1] == pytest.approx(-10005-200, abs=0.1)
-        assert my_bb[0][2] == pytest.approx(-10005-300, abs=0.1)
-        assert my_bb[1][0] == pytest.approx(10005+100, abs=0.1)
-        assert my_bb[1][1] == pytest.approx(10005+200, abs=0.1)
-        assert my_bb[1][2] == pytest.approx(10005+300, abs=0.1)
+        assert my_bb[0][0] == pytest.approx(-10005 - 100, abs=0.1)
+        assert my_bb[0][1] == pytest.approx(-10005 - 200, abs=0.1)
+        assert my_bb[0][2] == pytest.approx(-10005 - 300, abs=0.1)
+        assert my_bb[1][0] == pytest.approx(10005 + 100, abs=0.1)
+        assert my_bb[1][1] == pytest.approx(10005 + 200, abs=0.1)
+        assert my_bb[1][2] == pytest.approx(10005 + 300, abs=0.1)
