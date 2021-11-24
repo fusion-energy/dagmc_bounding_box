@@ -1,4 +1,6 @@
 
+[![PyPI](https://img.shields.io/pypi/v/dagmc_bounding_box?color=brightgreen&label=pypi&logo=grebrightgreenen&logoColor=green)](https://pypi.org/project/paramak/)
+
 Finds the bounding box of a DAGMC geometry file.
 
 This which is particularly useful when assigning a regular mesh tally over the entire DAGMC geometry.
