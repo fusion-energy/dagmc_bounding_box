@@ -14,7 +14,7 @@ pip install dagmc_bounding_box
 Find the bounding box
 ```python
 from dagmc_bounding_box import DagmcBoundingBox
-my_corners = DagmcBoundingBox(dagmc_filename).corners()
+my_corners = DagmcBoundingBox("dagmc.h5m").corners()
 print(my_corners)
 >>> ((-100, -100, -100), (100, 100, 100))
 ```
@@ -22,7 +22,7 @@ print(my_corners)
 Extend the bounding box
 ```python
 from dagmc_bounding_box import DagmcBoundingBox
-my_corners = DagmcBoundingBox(dagmc_filename).corners(extend=(10, 5, 2)
+my_corners = DagmcBoundingBox("dagmc.h5m").corners(extend=(10, 5, 2)
 print(my_corners)
 >>> ((-110, -105, -102), (110, 105, 102))
 ```
