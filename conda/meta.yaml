@@ -1,9 +1,9 @@
 {% set name = "dagmc_bounding_box" %}
-{% set data = load_setup_py_data() %}
+{% set version = "0.1.0" %}
 
 package:
   name: "{{ name|lower }}"
-  version: {{ data.get('version') }}
+  version: {{ version }}
 
 source:
   path: ..
