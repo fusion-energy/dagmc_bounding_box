@@ -26,10 +26,11 @@ jobs:
 
       - name: install package
         run: |
-          python setup.py install
+          pip install .
 
       - name: Run tests
         run: |
+          pip install .[tests]
           pytest tests -v --cov=dagmc_bounding_box --cov-append --cov-report term --cov-report xml
 
       - name: Upload to codecov
