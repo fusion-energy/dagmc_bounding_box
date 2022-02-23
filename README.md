@@ -1,7 +1,10 @@
 
 [![N|Python](https://www.python.org/static/community_logos/python-powered-w-100x40.png)](https://www.python.org)
 
+[![CI with install](https://github.com/fusion-energy/dagmc_bounding_box/actions/workflows/ci_with_install.yml/badge.svg)](https://github.com/fusion-energy/dagmc_bounding_box/actions/workflows/ci_with_install.yml)
+
 [![PyPI](https://img.shields.io/pypi/v/dagmc_bounding_box?color=brightgreen&label=pypi&logo=grebrightgreenen&logoColor=green)](https://pypi.org/project/paramak/)
+[![anaconda-publish](https://github.com/fusion-energy/dagmc_bounding_box/actions/workflows/anaconda-publish.yml/badge.svg)](https://github.com/fusion-energy/dagmc_bounding_box/actions/workflows/anaconda-publish.yml)
 
 Finds the bounding box of a DAGMC geometry file.
 
