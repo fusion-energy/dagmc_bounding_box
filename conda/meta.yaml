@@ -16,7 +16,7 @@ requirements:
     - python {{ python }}
     - setuptools
   run:
-    - python
+    - python {{ python }}
     - meshio
     - trimesh
 
@@ -27,6 +27,8 @@ test:
     - pytest
   source_files:
     - tests/
+  #TODO add tests once example h5m files are available from fusion_neutronics_workflow
+  # or refactor to use local h5m files
   # commands:
   #   - pytest tests
 
