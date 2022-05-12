@@ -1,5 +1,6 @@
 import trimesh
 from typing import Tuple
+from pathlib import Path
 
 
 class DagmcBoundingBox:
@@ -16,7 +17,11 @@ class DagmcBoundingBox:
         """
 
         self.h5m_filename = h5m_filename
-        self.mesh_object = trimesh.load_mesh(self.h5m_filename, process=False)
+
+        if not Path(h5m_filename).is_file():
+            raise FileNotFoundError(f"file {h5m_filename} not found.")
+
+        self.mesh_object = trimesh.load_mesh(h5m_filename, process=False)
 
     def corners(
         self, expand: Tuple[float, float, float] = None
